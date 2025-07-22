@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CPT College</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    nav {
+      background-color: #005599;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .search-container, .login-container {
+      margin: 40px auto;
+      text-align: center;
+    }
+    input[type="text"], input[type="password"] {
+      padding: 10px;
+      width: 40%;
+      font-size: 1em;
+      border: 2px solid #003366;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    input[type="submit"], button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>CPT College</header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#login">Student Login</a>
+  </nav>
+
+  <div class="search-container">
+    <h2>Search Our Website</h2>
+    <form>
+      <input type="text" placeholder="Search anything..." />
+      <input type="submit" value="Search" />
+    </form>
+  </div>
+
+  <div class="login-container" id="login">
+    <h2>Student Login</h2>
+    <form onsubmit="login(event)">
+      <input type="text" id="username" placeholder="Enter username" required /><br>
+      <input type="password" id="password" placeholder="Enter password" required /><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 CPT College. All Rights Reserved.
+  </footer>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Dummy login logic
+      if (username === "student" && password === "1234") {
+        alert("Login successful! Welcome to CPT College.");
+      } else {
+        alert("Invalid credentials. Try again.");
+      }
+    }
+  </script>
+
+</body>
+</html>
